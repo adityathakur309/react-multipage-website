@@ -7,6 +7,13 @@ export const ContactForm = () => {
 
     const handleFormSubmit = (formData) => {
         let formInputData = Object.fromEntries(formData.entries());
+        if(formInputData){
+            Swal.fire({
+                title: "submitted",
+                text:   ` hey, ${formInputData.name} form has been sent successfully`,
+                icon: "success"
+              });
+        }
 
     }
 
